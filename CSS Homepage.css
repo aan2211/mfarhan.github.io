@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins";
+}
+
+body {
+    color: #ededed;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)),url(BG\ WEB.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #1c2227;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: rgb(255, 230, 0);
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c2227;
+    animation: showRight 1s ease forwards;
+    animation-delay: .6s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 35px;
+    transition: .2s;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c2227;
+    animation: showRight 1s ease forwards;
+    animation-delay: .6s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(255, 230, 0);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0% 35%;
+}
+
+.home-content {
+    max-width: none;
+}
+
+.home-content h1 {
+    font-size: 52px;
+    font-weight: 750;
+    line-height: 1.2;
+    color:  rgb(255, 230, 0);
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(252, 213, 40);
+}
+
+.home-content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0 40px;
+    text-align: justify;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #ededed;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.btn-box a:hover {
+    color: rgb(255, 230, 0);
+}
+
+.home-image {
+    position: relative;
+    size: 400px 200px;
+    scale: 30%;
+}
+
+/*KEYFRAME ANIMATION*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
